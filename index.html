@@ -1,17 +1,98 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="UTF-8">
+
+<style>
+  header {
+    background-color: rgb(0, 0, 0);
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
+    color: white;
+  }
+body {
+  background-color: gray;
+  }
+</style>
+
 <title>Jeff's Home</title>
 </head>
 <body>
-
+  
+<header>
 <h1>Welcome to Jeff's Home</h1>
-<p>Under Construction<br />
-    hello I am in a new line.
-</p>
+<p>&#128512;</p>
+</header>
 
-<p>Under Construction in p2</p>
-<p><a href="https://www.w3schools.com">Visit W3Schools</a></p>
+<table style="width:100%; border: 1px solid #000000;" >
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td>Jeff</td>
+    <td>Lee</td>
+    <td>20</td>
+  </tr>
+</table>
 
+<h3>Links</h3>
+<a href="https://www.w3schools.com/html/default.asp">html home</a>
+<br />
+<a href="https://www.w3schools.com/java/default.asp">java home</a>
+
+<h3>Converter km/mile</h3>
+<input type="text" id="km">
+<input type="text" id="mile">
+<button onclick="kmToMile()">Km To Mile</button>
+<button onclick="mileToKm()">Mile To Km</button>
+<p>Result:</p>
+<p id="convertResult"></p>
+<script>
+  function kmToMile(){
+    var x = document.getElementById("km").value;
+    var y = x/1.609;
+    document.getElementById("mile").value = y;
+  }
+  function mileToKm(){
+    var x = document.getElementById("mile").value;
+    var y = x*1.609;
+    document.getElementById("km").value = y;
+  }
+</script>
+
+  <!--<p id="add"></p>
+
+  <p id="add1"></p>
+  -->
+  
+  <button type="button" onclick="myFunction()">Function</button>
+
+  <p id="function"></p>
+  <p id="function2"></p>
+
+  <script>
+  window.alert("You are entering Jeff's Home page");
+  document.getElementById("add").innerHTML = 5 + 6;
+
+  let a, b, c;
+  a = 5;
+  b = 6;
+  c = a * b;
+  document.getElementById("add1").innerHTML = c;
+
+  function myFunction(){
+    document.getElementById("function").innerHTML = "This is a test function";
+    document.getElementById("function2").innerHTML = "This is line 2";
+  }
+  </script>
+
+<img src="https://www.thoughtco.com/thmb/bqpBnlNEXeFwni8Ma7WuV1myDwU=/4300x2419/smart/filters:no_upscale()/what-is-java-5b4bda1cc9e77c0037171617.jpg" alt="Italian Trulli" width="500" height="500" id="demo" style="display:none">
+<button type="button" onclick="document.getElementById('demo').style.display='block'">Click Me!
+  </button>
+  <button onclick="window.print()">Print this page</button>
 </body>
 </html>
